@@ -24,3 +24,10 @@ El servicio puede quedarse dormido después de 15 minutos sin tráfico entrante 
 
 ## Seguridad
 El puente limita los destinos a puertos IRC habituales para evitar convertir el sitio en un proxy TCP genérico. No guardes contraseñas de NickServ en el código.
+
+
+## Configuración ComoGamers
+
+Servidor predeterminado: `comogamers.irc-server.org`
+Puerto: `6697`
+TLS: activado
