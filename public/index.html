@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ComoGamers WebIRC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="brand">Web<span>IRC</span></div>
+    <div id="status">Desconectado</div>
+  </header>
+
+  <main>
+    <section id="login" class="card">
+      <h1>Conectar a IRC</h1>
+      <div class="grid">
+        <label>Servidor<input id="host" value="comogamers.irc-server.org" placeholder="irc.example.com"></label>
+        <label>Puerto<input id="port" type="number" value="6697"></label>
+        <label>Nick<input id="nick" value="WebIRCUser"></label>
+        <label>Usuario<input id="username" value="webirc"></label>
+      </div>
+      <label class="tls"><input id="tls" type="checkbox" checked> Usar TLS</label>
+      <button id="connect">Conectar</button>
+      <p class="hint">Puertos permitidos: 6667, 6697, 7000, 7001 y 9999.</p>
+    </section>
+
+    <section id="app" class="irc hidden">
+      <aside>
+        <div class="panel-title">Canales</div>
+        <div id="channels"></div>
+        <button id="joinBtn">+ Unirse a canal</button>
+      </aside>
+      <div class="chat">
+        <div id="messages"></div>
+        <form id="form">
+          <input id="input" autocomplete="off" placeholder="Escribe un mensaje o /comando...">
+          <button>Enviar</button>
+        </form>
+      </div>
+      <aside class="users">
+        <div class="panel-title">Usuarios</div>
+        <div id="userlist"></div>
+      </aside>
+    </section>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>
